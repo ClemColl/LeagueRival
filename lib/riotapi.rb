@@ -14,7 +14,7 @@ class RiotApi
   end
 
   def get_champion
-    champion_url = "#{BASE_URL}/api/lol/static-data/euw/v1.2/champion#{API_KEY}"
+    champion_url = "https://global.api.pvp.net/api/lol/static-data/euw/v1.2/champion#{API_KEY}"
     parse_json(champion_url)
   end
 

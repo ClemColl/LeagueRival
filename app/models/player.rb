@@ -2,6 +2,7 @@ class Player < ActiveRecord::Base
 	require 'riotapi'
 
 	before_save :downcase_players
+	before_save :mod_champ_save
 
 	# returns the player id
 	def self.return_id(name)
@@ -22,12 +23,13 @@ class Player < ActiveRecord::Base
 	def self.get_champion_id(champ_name)
 		api = RiotApi.new
 		champs = api.get_champion
-		champs["data"][champ_name]["id"]
+		champs["data"]["id"]
+		
 	end
 
-	 def self.determine_champion_probability(summoner_name, champ_name)
+	def self.determine_champion_probability(summoner_name, champ_name)
 
-    champion_ids = return_summoner_champion_list(summoner_name).collect{|player| player["id"]}
+    champion_ids = return_summoner_champion_list(summoner_name).hash{|player| player["id"]}
     desired_champ_id = get_champion_id(champ_name)
     winrate = 0.0
 
@@ -36,7 +38,7 @@ class Player < ActiveRecord::Base
       hash = Hash[champion_ids.map.with_index.to_a]
       champ_array_location = hash[desired_champ_id]
 
-      # calculate winrate
+      # calcul du winrate
       player_stat = return_summoner_champion_list(summoner_name)[champ_array_location]["stats"]
       total_played = player_stat["totalSessionsPlayed"]
       total_won = player_stat["totalSessionsWon"]
@@ -50,10 +52,16 @@ class Player < ActiveRecord::Base
 
 	private
 
-	#downcase the players name before saving
+	#downcase des noms de joueurs
 	def downcase_players
 		self.p1.downcase!
 		self.p2.downcase!
 	end
+
+	def mod_champ_save
+    #split the word first. capitalize each individual word. Join them back with no spaces in between. 
+    	self.c1 = c1.split.map(&:capitalize).join('')
+    	self.c2 = c2.split.map(&:capitalize).join('')
+  	end
 
 end
