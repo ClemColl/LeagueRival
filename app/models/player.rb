@@ -23,13 +23,13 @@ class Player < ActiveRecord::Base
 	def self.get_champion_id(champ_name)
 		api = RiotApi.new
 		champs = api.get_champion
-		champs["data"]["id"]
+		champs["data"][champ_name]["id"]
 		
 	end
 
 	def self.determine_champion_probability(summoner_name, champ_name)
 
-    champion_ids = return_summoner_champion_list(summoner_name).hash{|player| player["id"]}
+    champion_ids = return_summoner_champion_list(summoner_name).collect{|player| player["id"]}
     desired_champ_id = get_champion_id(champ_name)
     winrate = 0.0
 

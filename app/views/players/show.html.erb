@@ -1,28 +1,19 @@
+<%= image_tag "http://ddragon.leagueoflegends.com/cdn/5.13.1/img/champion/#{@player.c1}.png" %>
 <p>
-  In any given ranked game, the probability of 
-  <b>
-    <%= @player.p1 %>
-  </b>
-  winning with
+  In any given ranked game, the probability of <%= @player.p1 %> winning with
   <%= image_tag "http://ddragon.leagueoflegends.com/cdn/5.13.1/img/champion/#{@player.c1}.png" %>
-  <b>
-    <%= @player.c1 %>
-  </b>
-  is
-  <%= Player.determine_champion_probability(@player.p1, @player.c1) %>
+</p>
+<br>
+<p>
+  <%= @player.c1 %> is <%= Player.determine_champion_probability(@player.p1, @player.c1) %>
 </p>
 <p>
-  In any given ranked game, the probability of 
-  <b>
-    <%= @player.p2 %>
-  </b>
-  winning with
+  In any given ranked game, the probability of <%= @player.p2 %> winning with
   <%= image_tag "http://ddragon.leagueoflegends.com/cdn/5.13.1/img/champion/#{@player.c2}.png" %>
-  <b>
-    <%= @player.c2 %>
-  </b>
-  is
-  <%= Player.determine_champion_probability(@player.p2, @player.c2) %>
-  <h2>Want to Search Another Pair?</h2>
-  <%= render 'form' %>
+</p>   
+<p> 
+  <%= @player.c2 %> is <%= Player.determine_champion_probability(@player.p2, @player.c2) %>
 </p>
+
+  <h2>Voulez vous faire un autre combat ?</h2>
+  <%= render 'form' %>
