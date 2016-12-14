@@ -42,7 +42,6 @@ class Player < ActiveRecord::Base
       player_stat = return_summoner_champion_list(summoner_name)[champ_array_location]["stats"]
       total_played = player_stat["totalSessionsPlayed"]
       total_won = player_stat["totalSessionsWon"]
-
       winrate = (total_won.to_f / total_played.to_f)
       winrate.round(2) * 100
     else
