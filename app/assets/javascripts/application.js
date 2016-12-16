@@ -16,5 +16,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require jquery.mb.YTPlayer.min.js
 //= require_tree .
+//= require bootstrap.min.js
+//= require jarallax.js
+//= require jquery.min.js
+//= require jquery.mb.YTPlayer.min.js
+//= require script.js
+//= require tether.min.js

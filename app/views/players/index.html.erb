@@ -12,13 +12,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link href="https://fonts.googleapis.com/css?family=Play:700" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-  <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
+  <%= stylesheet_link_tag "tether.min.css" %>
+  <%= stylesheet_link_tag "style.css" %>
+  <%= stylesheet_link_tag "bootstrap.min.css" %>
+  <%= stylesheet_link_tag "material.css" %>
+  <%= stylesheet_link_tag "mbr-additional.css" %>
   
 </head>
 <body>
@@ -44,32 +42,14 @@
 </section>
 <section class="mbr-section" id="pricing-table1-e" style="background-color: rgb(124, 112, 107); padding-top: 40px; padding-bottom: 120px;">
 
-    
-
-    <div class="mbr-section mbr-section__container mbr-section__container--middle">
-      <div class="container">
-          <div class="row">
-              <div class="col-xs-12 text-xs-center">
-                  
-                  
-              </div>
-          </div>
-      </div>
-    </div>
   <%= form_for :player, url: players_path do |f| %>
     <div class="mbr-section mbr-section-nopadding mbr-price-table">
       <div class="row">
             <div class="col-xs-12 col-md-6 col-xl-4">
                 <div class="mbr-plan card text-xs-center">
                     <div class="mbr-plan-header card-block">
-                      
-                      <div class="card-title">
-                        <h3 class="mbr-plan-title"></h3>
-                        <small class="mbr-plan-subtitle"></small>
-                      </div>
                       <div class="card-text">
                           <div class="mbr-price">
-                            <span class="mbr-price-value"></span>
                             <span class="mbr-price-desc"><%= f.label :p1, "Votre nom d'invocateur"  %>
                             <%= f.text_field :p1 %><br><br><%= f.label :c1, "Votre champion" %>
                             <%= f.text_field :c1 %><br></span><small class="mbr-price-term"></small>
@@ -80,9 +60,7 @@
             </div>
             <div class="col-xs-12 col-md-6 col-xl-4">
                 <div class="mbr-plan card text-xs-center">
-                    <div class="mbr-plan-body card-block">
-                      <div class="mbr-plan-list"></div>
-                      <div class="mbr-plan-btn"><a class="btn btn-white btn-white-outline"><%= f.submit "Combattre" %></a></div>
+                    <div class="mbr-plan-body card-block"><%= f.submit "Combattre" %>
                     </div>
                 </div>
             </div>
@@ -90,12 +68,8 @@
             <div class="col-xs-12 col-md-6 col-xl-4">
                 <div class="mbr-plan card text-xs-center">
                     <div class="mbr-plan-header card-block">
-                      
-                      <div class="card-title">
-                      </div>
                       <div class="card-text">
                           <div class="mbr-price">
-                            <span class="mbr-price-value"></span>
                             <span class="mbr-price-desc"><%= f.label :p2, "Son nom d'invocateur" %>
                 <%= f.text_field :p2 %><br><br><%= f.label :c2, "Son champion" %>
                 <%= f.text_field :c2 %><br></span><small class="mbr-price-term"></small>
@@ -107,6 +81,7 @@
           </div>
     </div>
  <% end %>
+ <p style="margin-left:auto;margin-right: auto;width:500px;"> Vous n'avez pas de compte ? <br> Utilisez Zeprionrails comme nom d'invocateur et choisissez vos champions préférés ! </p>
 </section>
 
 <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-2" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
@@ -115,15 +90,13 @@
         <p class="text-xs-center">League Rivals isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.<br><br>League Rivals | <a href="https://github.com/Zepri/LeagueRivals" target="_blank" class="text-success">Github</a></p>
     </div>
 </footer>
-
-
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/smooth-scroll/SmoothScroll.js"></script>
-  <script src="assets/jquery-mb-ytplayer/jquery.mb.YTPlayer.min.js"></script>
-  <script src="assets/theme/js/script.js"></script>
   
+  <%= javascript_include_tag "bootstrap.min.js" %>
+  <%= javascript_include_tag "jarallax.js" %>
+  <%= javascript_include_tag "jquery.min.js" %>
+  <%= javascript_include_tag "jquery.mb.YTPlayer.min.js" %>
+  <%= javascript_include_tag "script.js" %>
+  <%= javascript_include_tag "tether.min.js" %>
   
 </body>
 </html>
