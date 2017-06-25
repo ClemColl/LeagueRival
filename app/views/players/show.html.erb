@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Play:700" rel="stylesheet">
-  <%= stylesheet_link_tag "material.css" %>
-  <%= stylesheet_link_tag "tether.min.css" %>
-  <%= stylesheet_link_tag "bootstrap.min.css" %>
-  <%= stylesheet_link_tag "style.css" %>
-  <%= stylesheet_link_tag "mbr-additional.css" %>
-  
-</head>
-<body>
-
-<section class="mbr-section mbr-section-hero mbr-section-full" id="header5-f" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/<%= @player.c1 %>_0.jpg');background-size: cover; height: 717px;">
+<div class="mbr-section mbr-section-hero mbr-section-full" id="header5-f" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/<%= @player.c1 %>_0.jpg');background-size: cover; height: 717px;">
 
     
 
@@ -36,9 +16,9 @@
         </div>
     </div>
 
-</section>
+</div>
 
-<section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow" id="header5-g" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/<%= @player.c2 %>_0.jpg');background-size: cover;background-size: cover; height: 717px;background-attachment: fixed;">
+<div class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow" id="header5-g" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/<%= @player.c2 %>_0.jpg');background-size: cover;background-size: cover; height: 717px;background-attachment: fixed;">
 
     
 
@@ -56,9 +36,9 @@
         </div>
     </div>
 
-</section>
+</div>
 
-<section class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow" id="header5-h">
+<div class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow" id="header5-h">
 
     
 
@@ -83,9 +63,9 @@
     </div>
   </div>
 
-</section>
+</div>
 
-<section class="mbr-section article" id="msg-box3-i" style="background-color: rgb(242, 242, 242); padding-top: 80px; padding-bottom: 80px;">
+<div class="mbr-section article" id="msg-box3-i" style="background-color: rgb(242, 242, 242); padding-top: 80px; padding-bottom: 80px;">
 
     
     <div class="container">
@@ -93,19 +73,14 @@
             <div class="col-md-8 col-md-offset-2 text-xs-center">
                 
                 
-                <div><%= link_to "Nouveau combat ?", players_path %></div>
+                <button><%= link_to "Nouveau combat ?", players_path %></button>
             </div>
         </div>
     </div>
 
-</section>
+</div>
 
-<footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-2" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
-    <div class="container">
-        <p class="text-xs-center">League Rivals isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.<br><br>League Rivals | <a href="https://github.com/Zepri/LeagueRivals" target="_blank" class="text-success">Github</a></p>
-    </div>
-</footer>
+<%= render 'footer' %>
 
 
   <script src="assets/javascripts/web/assets/jquery/jquery.min.js"></script>
@@ -114,7 +89,3 @@
   <script src="assets/javascripts/smooth-scroll/SmoothScroll.js"></script>
   <script src="assets/javascripts/jarallax/jarallax.js"></script>
   <script src="assets/javascripts/css/theme/js/script.js"></script>
-  
-  
-</body>
-</html>

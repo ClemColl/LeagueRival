@@ -6,9 +6,23 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Play:700" rel="stylesheet">
+  	<%= stylesheet_link_tag "tether.min.css" %>
+  	<%= stylesheet_link_tag "style.css" %>
+  	<%= stylesheet_link_tag "bootstrap.min.css" %>
+  	<%= stylesheet_link_tag "material.css" %>
+  	<%= stylesheet_link_tag "mbr-additional.css" %>
   </head>
 
   <body>
     <%= yield %>
   </body>
+
+ <%= javascript_include_tag "bootstrap.min.js" %>
+<%= javascript_include_tag "jarallax.js" %>
+<%= javascript_include_tag "jquery.min.js" %>
+<%= javascript_include_tag "jquery.mb.YTPlayer.min.js" %>
+<%= javascript_include_tag "script.js" %>
+
 </html>

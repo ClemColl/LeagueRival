@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-  <meta name="description" content="">
-  <title>League Rivals</title>
-  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Play:700" rel="stylesheet">
-  <%= stylesheet_link_tag "tether.min.css" %>
-  <%= stylesheet_link_tag "style.css" %>
-  <%= stylesheet_link_tag "bootstrap.min.css" %>
-  <%= stylesheet_link_tag "material.css" %>
-  <%= stylesheet_link_tag "mbr-additional.css" %>
-  
-</head>
-<body>
-<section class="mbr-section mbr-section-hero mbr-section-full" id="header1-1" data-bg-video="https://www.youtube.com/embed/Mgrr_SShwpg?rel=0&amp;amp;showinfo=0&amp;autoplay=1&amp;loop=1">
+<div class="mbr-section mbr-section-hero mbr-section-full" id="header1-1" data-bg-video="https://www.youtube.com/embed/Mgrr_SShwpg?rel=0&amp;amp;showinfo=0&amp;autoplay=1&amp;loop=1">
 
     <div class="mbr-overlay" style="opacity: 0.1; background-color: rgb(0, 0, 0);"></div>
 
@@ -36,8 +17,8 @@
 
     
 
-</section>
-<section class="mbr-section" id="pricing-table1-e" style="background-color: white; padding-top: 40px; padding-bottom: 120px;">
+</div>
+<div class="mbr-section" id="pricing-table1-e" style="background-color: white; padding-top: 40px; padding-bottom: 120px;">
 <p style="margin-left:auto;margin-right: auto;width:700px;"> Pour une liste des champions, veuillez vous rendre <a target="_blank" href="http://gameinfo.euw.leagueoflegends.com/en/game-info/champions/" >ici</a> <br>Vous n'avez pas de compte ? <br> Utilisez Zeprionrails comme nom d'invocateur et choisissez vos champions préférés !<br><br><span style="color:#b30000;"> -Veuillez écrire votre pseudo sans espace: Zepri on Rails => Zeprionrails <br> -Utilisez les noms de champions en anglais (voir le lien au dessus)</span></p>
 
   <%= form_for :player, url: players_path do |f| %>
@@ -79,21 +60,6 @@
           </div>
     </div>
  <% end %>
-</section>
+</div>
 
-<footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-2" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
-    
-    <div class="container">
-        <p class="text-xs-center">League Rivals isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.<br><br>League Rivals | <a href="https://github.com/Zepri/LeagueRivals" target="_blank" class="text-success">Github</a></p>
-    </div>
-</footer>
-  
-  <%= javascript_include_tag "bootstrap.min.js" %>
-  <%= javascript_include_tag "jarallax.js" %>
-  <%= javascript_include_tag "jquery.min.js" %>
-  <%= javascript_include_tag "jquery.mb.YTPlayer.min.js" %>
-  <%= javascript_include_tag "script.js" %>
-  <%= javascript_include_tag "tether.min.js" %>
-  
-</body>
-</html>
+<%= render 'footer' %>
