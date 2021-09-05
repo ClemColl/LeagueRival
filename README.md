@@ -1,24 +1,36 @@
-# README
+# OUTDATED
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo is unmaintained, it was only used as an educational project and should not be used because of potential security vulnerabilities.
+Please do not use this code without updating the gems used.
+Since then, the Riot API endpoints has changed and this code should be updated.
 
-Things you may want to cover:
+# Context
 
-* Ruby version
+I used this project to learn about web programming. I had no prior knowledge about programming or the lifecycle of a web app.
+I ended up defining 3 goals :
 
-* System dependencies
+* Build a working Ruby on Rails app
 
-* Configuration
+* Use and understand an API
 
-* Database creation
+* Deploy the app online
 
-* Database initialization
+# Stack used
 
-* How to run the test suite
+* Ruby on Rails
 
-* Services (job queues, cache servers, search engines, etc.)
+* PostgreSQL
 
-* Deployment instructions
+* Puma
 
-* ...
+* Heroku
+
+* Git
+
+# Concept
+
+After entering your League of Legends username and your rival's, you can see who has the best winrate with specific champions. The result screen shows which champions were chosen and if you won or not.
+
+# Observations
+
+This project definitely allowed me to begin my Ruby on Rails journey. I did set a goal that was quite hard to achieve since I was still learning HTML/CSS. But finishing this project was one of the most satisfying feeling I had with web development.
